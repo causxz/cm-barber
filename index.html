@@ -39,50 +39,39 @@
     </script>
 
     <style>
-        /* Custom Styles para refinamento visual */
         body {
             background-color: #0F172A;
             color: #F5E6CA;
             overflow-x: hidden;
         }
 
-        /* Efeito de Vidro (Glassmorphism) */
+        /* Glassmorphism */
         .glass {
-            background: rgba(22, 36, 56, 0.7);
+            background: rgba(22, 36, 56, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(198, 156, 78, 0.1);
         }
 
-        /* Scrollbar personalizada */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0F172A;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #162438;
-            border-radius: 4px;
-            border: 1px solid #C69C4E;
-        }
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #162438; border-radius: 4px; border: 1px solid #C69C4E; }
 
-        /* Animação do Botão CTA */
+        /* Animações Customizadas */
         @keyframes pulse-gold {
             0% { box-shadow: 0 0 0 0 rgba(198, 156, 78, 0.4); }
             70% { box-shadow: 0 0 0 15px rgba(198, 156, 78, 0); }
             100% { box-shadow: 0 0 0 0 rgba(198, 156, 78, 0); }
         }
-        .btn-pulse {
-            animation: pulse-gold 2s infinite;
-        }
+        .btn-pulse { animation: pulse-gold 2s infinite; }
 
-        /* Utilitários para imagens/vídeos */
-        .media-hover {
-            transition: all 0.5s ease;
-        }
-        .group:hover .media-hover {
-            transform: scale(1.05);
+        .media-hover { transition: all 0.5s ease; }
+        .group:hover .media-hover { transform: scale(1.05); }
+
+        /* Ajuste para vídeo vertical em mobile */
+        .video-portrait {
+            aspect-ratio: 9/16;
         }
     </style>
 </head>
@@ -90,7 +79,7 @@
 
     <header class="fixed w-full top-0 z-50 glass transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="images/logo.jpeg" class="group">
+            <a href="#" class="group">
                 <h1 class="font-serif text-2xl md:text-3xl font-bold tracking-wider text-gold group-hover:text-cream transition-colors">
                     Barbearia <span class="text-cream italic font-normal">CM</span>
                 </h1>
@@ -114,7 +103,6 @@
         <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-navy/50 rounded-full blur-[100px]"></div>
 
         <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            
             <span class="inline-block py-1 px-3 border border-gold/30 rounded-full text-xs font-semibold tracking-widest text-gold mb-6 uppercase bg-navy/30 backdrop-blur-sm">
                 O Novo Padrão de Estilo
             </span>
@@ -143,37 +131,54 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h3 class="font-serif text-4xl text-cream mb-2">Nossos Serviços</h3>
-                <div class="w-24 h-1 bg-gold mx-auto"></div>
+                <div class="w-24 h-1 bg-gold mx-auto mb-4"></div>
+                <p class="text-gray-400">Excelência em cada detalhe.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group bg-dark border border-gold/10 p-8 rounded-2xl hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(198,156,78,0.2)]" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mb-6 text-gold text-2xl group-hover:scale-110 transition-transform duration-500 border border-gold/20">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <div class="group bg-dark border border-gold/10 p-6 rounded-2xl hover:border-gold/50 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 mx-auto bg-navy rounded-full flex items-center justify-center mb-4 text-gold text-2xl group-hover:scale-110 transition-transform border border-gold/20">
                         <i class="fa-solid fa-scissors"></i>
                     </div>
-                    <h4 class="font-serif text-2xl text-cream mb-3">Corte Premium</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Consultoria visual, corte de precisão na tesoura ou máquina, finalização com produtos de alta performance.</p>
-                    <span class="text-gold font-bold">R$ 50,00</span>
+                    <h4 class="font-serif text-xl text-cream">Cabelo</h4>
                 </div>
 
-                <div class="group bg-dark border border-gold/10 p-8 rounded-2xl hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(198,156,78,0.2)]" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mb-6 text-gold text-2xl group-hover:scale-110 transition-transform duration-500 border border-gold/20">
+                <div class="group bg-dark border border-gold/10 p-6 rounded-2xl hover:border-gold/50 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-14 h-14 mx-auto bg-navy rounded-full flex items-center justify-center mb-4 text-gold text-2xl group-hover:scale-110 transition-transform border border-gold/20">
                         <i class="fa-solid fa-feather-pointed"></i>
                     </div>
-                    <h4 class="font-serif text-2xl text-cream mb-3">Barba Real</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Toalha quente, esfoliação facial, desenho com navalha e hidratação profunda com óleos essenciais.</p>
-                    <span class="text-gold font-bold">R$ 40,00</span>
+                    <h4 class="font-serif text-xl text-cream">Barba</h4>
                 </div>
 
-                <div class="group bg-gradient-to-b from-navy to-dark border border-gold/30 p-8 rounded-2xl hover:border-gold transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(198,156,78,0.2)] relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                    <div class="absolute top-0 right-0 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                    <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mb-6 text-gold text-2xl group-hover:scale-110 transition-transform duration-500 border border-gold/20">
-                        <i class="fa-solid fa-crown"></i>
+                <div class="group bg-dark border border-gold/10 p-6 rounded-2xl hover:border-gold/50 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 mx-auto bg-navy rounded-full flex items-center justify-center mb-4 text-gold text-2xl group-hover:scale-110 transition-transform border border-gold/20">
+                        <i class="fa-regular fa-eye"></i>
                     </div>
-                    <h4 class="font-serif text-2xl text-cream mb-3">Combo CM</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">A experiência completa. Corte + Barba + Sobrancelha. Saia renovado e pronto para dominar.</p>
-                    <span class="text-gold font-bold">R$ 80,00</span>
+                    <h4 class="font-serif text-xl text-cream">Sobrancelha</h4>
                 </div>
+
+                <div class="group bg-dark border border-gold/10 p-6 rounded-2xl hover:border-gold/50 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="250">
+                    <div class="w-14 h-14 mx-auto bg-navy rounded-full flex items-center justify-center mb-4 text-gold text-2xl group-hover:scale-110 transition-transform border border-gold/20">
+                        <i class="fa-solid fa-fill-drip"></i>
+                    </div>
+                    <h4 class="font-serif text-xl text-cream">Pigmentação</h4>
+                </div>
+
+                <div class="group bg-dark border border-gold/10 p-6 rounded-2xl hover:border-gold/50 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 mx-auto bg-navy rounded-full flex items-center justify-center mb-4 text-gold text-2xl group-hover:scale-110 transition-transform border border-gold/20">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="font-serif text-xl text-cream">Luzes</h4>
+                </div>
+
+                <div class="group bg-gradient-to-br from-navy to-dark border border-gold/30 p-6 rounded-2xl hover:border-gold transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="350">
+                    <div class="w-14 h-14 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold text-2xl group-hover:rotate-90 transition-transform border border-gold/20">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <h4 class="font-serif text-xl text-cream">E Mais</h4>
+                </div>
+
             </div>
         </div>
     </section>
@@ -183,53 +188,88 @@
             <div class="flex flex-col md:flex-row justify-between items-end mb-12" data-aos="fade-right">
                 <div>
                     <h3 class="font-serif text-4xl text-cream mb-2">Portfolio Visual</h3>
-                    <p class="text-gray-400">Onde a técnica encontra a arte.</p>
+                    <p class="text-gray-400">Confira o estilo CM.</p>
                 </div>
                 <a href="https://instagram.com" class="text-gold hover:text-cream mt-4 md:mt-0 underline decoration-1 underline-offset-4">Ver Instagram <i class="fa-solid fa-arrow-right ml-2"></i></a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4 h-auto md:h-[800px]">
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4">
                 
-                <div class="w-full max-w-[400px] mx-auto md:col-span-2 md:row-span-3 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-colors duration-300 relative group" data-aos="zoom-in">
-                <video autoplay muted loop playsinline 
-                    class="w-full h-[600px] object-cover media-hover opacity-80 group-hover:opacity-100">
-                    <source src="images/video1.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent flex items-end p-6">
+                <div class="md:col-span-2 md:row-span-2 w-full h-[600px] md:h-[700px] rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 relative group" data-aos="zoom-in">
+                    <video autoplay muted loop playsinline 
+                           class="w-full h-full object-cover media-hover opacity-90 group-hover:opacity-100">
+                        <source src="images/video1.mp4" type="video/mp4">
+                        <img src="https://images.unsplash.com/photo-1593702295094-aea8c5c13586?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+                    </video>
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent flex items-end p-8">
                         <div>
-                            <span class="bg-gold text-dark text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Vídeo</span>
-                            <h4 class="font-serif text-xl text-white">Ambiente & Experiência</h4>
+                            <span class="bg-gold text-dark text-[10px] font-bold px-3 py-1 rounded uppercase mb-2 inline-block shadow-lg">Vídeo</span>
+                            <h4 class="font-serif text-3xl text-white drop-shadow-lg">Lifestyle CM</h4>
+                            <p class="text-sm text-gray-300 mt-1">Vivencie a experiência.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="group relative md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-colors duration-300" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop" alt="Corte Tesoura" class="w-full h-full object-cover media-hover grayscale group-hover:grayscale-0">
+                <div class="md:col-span-1 md:row-span-1 h-[300px] md:h-auto rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 group relative" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800&auto=format&fit=crop" alt="Corte" class="w-full h-full object-cover media-hover grayscale group-hover:grayscale-0">
                 </div>
 
-                <div class="group relative md:col-span-1 md:row-span-2 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-colors duration-300" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800&auto=format&fit=crop" alt="Estilo Vintage" class="w-full h-full object-cover media-hover grayscale group-hover:grayscale-0">
-                    <div class="absolute bottom-4 left-4">
-                         <h4 class="font-serif text-lg text-white drop-shadow-md">Degradê Navalhado</h4>
+                <div class="md:col-span-1 md:row-span-1 h-[300px] md:h-auto rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 group relative" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1503951914875-befbb711ed3e?q=80&w=800&auto=format&fit=crop" alt="Barbearia" class="w-full h-full object-cover media-hover grayscale group-hover:grayscale-0">
+                </div>
+
+                <div class="md:col-span-2 md:row-span-1 h-[340px] rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 group relative" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1512690459411-b9245aed8ad5?q=80&w=1200&auto=format&fit=crop" alt="Detalhes" class="w-full h-full object-cover media-hover grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 flex items-center justify-center bg-navy/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                         <span class="text-cream font-serif text-2xl border-b border-gold pb-1">Detalhes & Precisão</span>
                     </div>
                 </div>
 
-                <div class="group relative md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
-                    <video autoplay muted loop playsinline class="w-full h-full object-cover media-hover">
-                        <source src="https://videos.pexels.com/video-files/3998394/3998394-hd_1920_1080_25fps.mp4" type="video/mp4">
-                    </video>
-                    <div class="absolute top-3 right-3 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div> </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="group relative md:col-span-2 md:row-span-1 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-colors duration-300" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1599351431202-6e0c06e7afbb?q=80&w=1200&auto=format&fit=crop" alt="Produtos" class="w-full h-full object-cover media-hover grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-navy/40">
-                         <span class="text-cream font-serif text-2xl border-b border-gold pb-1">Detalhes</span>
+    <section class="py-20 bg-navy/50 border-t border-gold/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <div class="bg-dark p-8 md:p-12 rounded-3xl border border-gold/10" data-aos="fade-right">
+                    <h3 class="font-serif text-3xl text-gold mb-8 flex items-center gap-3">
+                        <i class="fa-regular fa-clock"></i> Horários
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-cream text-lg">Segunda - Sexta</span>
+                            <span class="text-gold font-bold">09:00 - 20:00</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-cream text-lg">Sábado</span>
+                            <span class="text-gold font-bold">08:00 - 19:00</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2 opacity-50">
+                            <span class="text-cream text-lg">Domingo</span>
+                            <span class="text-gray-500 font-bold">Fechado</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-gold/20">
+                        <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-location-dot mr-2 text-gold"></i>Endereço:</p>
+                        <p class="text-cream text-xl">Rua Exemplo, 123 - Centro, Sua Cidade</p>
                     </div>
                 </div>
 
-                <div class="group relative md:col-span-2 md:row-span-1 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold transition-colors duration-300" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1503951914875-befbb711ed3e?q=80&w=1200&auto=format&fit=crop" alt="Cadeira Barbeiro" class="w-full h-full object-cover media-hover grayscale group-hover:grayscale-0">
+                <div class="h-[400px] w-full rounded-3xl overflow-hidden border border-gold/20 grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl relative" data-aos="fade-left">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.098177303024!2d-46.65390548440708!3d-23.564932967615024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <a href="#" class="absolute bottom-4 right-4 bg-gold text-dark px-4 py-2 rounded-full font-bold text-sm shadow-lg hover:bg-cream transition-colors">
+                        <i class="fa-solid fa-diamond-turn-right mr-1"></i> Como Chegar
+                    </a>
                 </div>
 
             </div>
@@ -264,15 +304,13 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inicialização das Animações
         AOS.init({
-            once: true,      // Anima apenas uma vez ao descer
-            offset: 100,     // Gatilho da animação (px)
-            duration: 800,   // Duração padrão
+            once: true,
+            offset: 100,
+            duration: 800,
             easing: 'ease-out-cubic',
         });
 
-        // Script simples para Header Glass mudar a opacidade ao rolar (opcional, refinamento extra)
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
